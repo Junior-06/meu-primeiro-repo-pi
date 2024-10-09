@@ -1,0 +1,69 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico Sensores ChartJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+</head>
+<style>
+
+</style>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+     
+</body>
+<script>
+  // SETUP
+  const Grafico = document.getElementById('myChart');
+  
+    new Chart(Grafico, {
+      type: 'bar',
+      data: {
+        labels: ['Manutenção ', 'Expedição', 'Armazenagem ', 'Montagem','Produção'],
+        datasets: [{
+          label: 'Quantidade Sensores',
+          data: [16, 4, 6, 10, 20],
+          backgroundColor: '#006666', 
+          borderColor: '#003333',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</html>
+<script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Manutenção ', 'Expedição', 'Armazenagem ', 'Montagem','Produção'],
+        datasets: [{
+          label: '# of Votes',
+          data: [16, 4, 6, 10, 20],
+          backgroundColor: '#006666', 
+          borderColor: '#003333',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
